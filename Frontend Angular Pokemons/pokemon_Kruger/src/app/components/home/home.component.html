@@ -1,0 +1,25 @@
+<div class="container my-5">
+  <h1>Pokemos Disponibles</h1>
+  <hr />
+  <input
+    type="text"
+    class="form-control"
+    placeholder=" buscar por nombre"
+    (input)="filter($event)"
+  />
+
+  <div class="row">
+    <div *ngFor="let pokemon of pokemonsT" class="col-xl-4 col-sm-6 col-xs-12">
+      <div class="card my-3" style="width: 18rem">
+        <img src="{{ pokemon.imageurl }}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ pokemon.nombre }}</h5>
+          <p class="card-text">{{ pokemon.descripcion }}</p>
+          <button class="btn btn-primary" (click)="detallepokemon(pokemon.id)">
+            ver mas
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="container my-5">
+  <h1>Pokemon {{ pokemon.nombre }}</h1>
+  <hr />
+  <div class="card mb-3" style="max-width: 540px">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img
+          src="{{ pokemon.imageurl }}"
+          class="img-fluid rounded-start"
+          alt="..."
+        />
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">
+            <b>{{ pokemon.nombre }}</b>
+          </h5>
+          <p class="card-text"><b>Descripcion:</b>{{ pokemon.descripcion }}</p>
+          <p class="card-text"><b>Evolución:</b>{{ pokemon.evolucion }}</p>
+          <p class="card-text"><b>Peso:</b>{{ pokemon.peso }} Kg</p>
+          <p class="card-text">
+            <small class="text-muted">{{ pokemon.tipo }}</small>
+          </p>
+          <button class="btn btn-primary" routerLink="../../home">Home</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
